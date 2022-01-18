@@ -1,0 +1,13 @@
+div.similar
+    div.container
+        div.similar__title Смотрите также похожие статьи:
+        div.similar__block-wrapper
+            each item, key in similar
+                a.similar__block(href="#") 
+                    div.similar__autor 
+                        img.similar__photo(src=`${item.photo}.jpg`, alt=`Автор статьи${item.title}`)
+                        div.similar__autor-right
+                            div.similar__name=item.name
+                            include grade
+                    div.similar__subtitle=item.title
+                    div.similar__text!=item.text

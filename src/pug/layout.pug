@@ -17,7 +17,14 @@ html(lang="ru")
 			div.header-wrapper
 				div.container
 					include blocks/header
-			main.content
+			main.main
 				block content
+			include blocks/similar
+			include blocks/footer
+			div#popup.popup
+				form.form.popup__form
+					div.form__title Получите больше интересных статей!
+					input.form__input(name="name" type="text" placeholder="Имя *" requaired)
+					input.form__input(name="email" type="text" placeholder="E-mail *" requaired)
 		block scripts
 			script(src="scripts/main.min.js")
