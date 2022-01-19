@@ -1,1 +1,16 @@
+mixin grade(starid, blockid)
+    div.star-rating(id=blockid)
+        input.star-rating__input(id=`${starid}-4` type="radio" name="star")
+        label.star-rating__star(for=`${starid}-4`)
 
+        input.star-rating__input(id=`${starid}-3` type="radio" name="star")
+        label.star-rating__star(for=`${starid}-3`)
+
+        input.star-rating__input(id=`${starid}-2` type="radio" name="star")
+        label.star-rating__star(for=`${starid}-2`)
+
+        input.star-rating__input(id=`${starid}-1` type="radio" name="star")
+        label.star-rating__star(for=`${starid}-1`)
+
+        input.star-rating__input(id=`${starid}-0` type="radio" name="star")
+        label.star-rating__star(for=`${starid}-0`)

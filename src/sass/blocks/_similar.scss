@@ -21,6 +21,7 @@
         align-items: flex-start;
     }
     &__autor-right {
+        flex-grow: 1;
         &::before {
             content: '';
             display: block;

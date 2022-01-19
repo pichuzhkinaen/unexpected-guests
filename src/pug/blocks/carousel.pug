@@ -1,7 +1,16 @@
-div.carousel
-	div.carousel__slide(data-fancybox="gallery")
-		img(src="images/image-1.jpg", alt="Изображение к статье 1")
-	div.carousel__slide(data-fancybox="gallery")
-		img(src="images/image-2.jpg", alt="Изображение к статье 2")
-	div.carousel__slide(data-fancybox="gallery")
-		img(src="images/image-3.jpg", alt="Изображение к статье 3")
+div.carousel-wrapper
+	div#mainCarousel.carousel
+		div.carousel__slide
+			img(src="images/image-1.jpg", alt="Изображение к статье 1")
+		div.carousel__slide
+			img(src="images/image-2.jpg", alt="Изображение к статье 2")
+		div.carousel__slide
+			img(src="images/image-3.jpg", alt="Изображение к статье 3")
+
+	div#smallCarousel.carousel.carousel_type_small
+		div.carousel__slide
+			img(src="images/image-small-1.jpg", alt="Изображение к статье 1")
+		div.carousel__slide
+			img(src="images/image-small-2.jpg", alt="Изображение к статье 2")
+		div.carousel__slide
+			img(src="images/image-small-3.jpg", alt="Изображение к статье 3")

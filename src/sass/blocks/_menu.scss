@@ -8,6 +8,10 @@
     }
     &__item {
         margin: 0 25px;
+        transition: color .3s ease;
+        &:hover {
+            color: #FBFF30;
+        }
     }
     &__link {
         @include reset-link;

@@ -8,6 +8,6 @@ div.similar
                         img.similar__photo(src=`${item.photo}.jpg`, alt=`Автор статьи${item.title}`)
                         div.similar__autor-right
                             div.similar__name=item.name
-                            include grade
+                            +grade(`star-similar-${key}`, `block-star-similar-${key}`)
                     div.similar__subtitle=item.title
                     div.similar__text!=item.text
