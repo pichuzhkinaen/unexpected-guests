@@ -19,23 +19,27 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
-        Dots: false,
-        Navigation: false,
-    });
-      
-    const smallCarousel = new Carousel(document.querySelector("#smallCarousel"), {
-        Sync: {
-          target: mainCarousel,
-        },
-        Dots: false,
-        Navigation: false,
-      
-        infinite: false,
-        center: true,
-        slidesPerPage: 1,
-    });
+    // Carousel
+    const mainCarouselSlides = document.querySelectorAll('.carousel-main__slide'),
+          smallCarouselSlides = document.querySelectorAll('.carousel-small__slide');
 
+    for (let i = 0; i < smallCarouselSlides.length; i++) {
+        smallCarouselSlides[i].addEventListener('click', togleSlide);
+    }
+
+    function togleSlide(e) {
+        const target = e.target.parentNode,
+              idSmallSlide = target.id;
+        console.log(target);
+        console.log(idSmallSlide);
+
+        for (let i = 0; i < smallCarouselSlides.length; i++) {
+            smallCarouselSlides[i].classList.remove('hide');
+            mainCarouselSlides[i].classList.add('hide');
+        }
+        target.classList.add('hide');
+        mainCarouselSlides[idSmallSlide - 1].classList.remove('hide');
+    }
 
     // Мобильное меню
     // const hamburger = document.querySelector('.hamburger'),
