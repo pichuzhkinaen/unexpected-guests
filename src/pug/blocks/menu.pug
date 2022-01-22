@@ -2,4 +2,4 @@ nav.header__menu.menu
 	ul.menu__list
 		each item, key in menu
 			li.menu__item
-				a.menu__link(href=item.link)=item.title
+				a.menu__link(href=item.link)!=item.title

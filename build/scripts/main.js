@@ -42,18 +42,23 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 
     // Мобильное меню
-    // const hamburger = document.querySelector('.hamburger'),
-    //       menu = document.querySelector('.menu');
+    const hamburger = document.querySelector('.hamburger'),
+          menu = document.querySelector('.menu');
 
-    // hamburger.addEventListener('click', function() {
-    //     if (hamburger.classList.contains('active')) {
-    //         hamburger.classList.remove('active');
-    //         menu.classList.remove('open');
-    //     } else {
-    //         hamburger.classList.add('active');
-    //         menu.classList.add('open');
-    //     }
-    // });
-
-    
+    hamburger.addEventListener('click', function() {
+        if (hamburger.classList.contains('active')) {
+            hamburger.classList.remove('active');
+            menu.classList.remove('open');
+        } else {
+            hamburger.classList.add('active');
+            menu.classList.add('open');
+            
+            // Перемещение popup в мобильное меню
+            const mobileMenu = document.querySelector('.menu.open');
+            const popup = document.querySelector('.popup-button');
+            console.log(mobileMenu);
+            console.log(popup);
+            mobileMenu.appendChild(popup);
+        }
+    });  
 });
